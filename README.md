@@ -1,15 +1,15 @@
 # Goodfinds
 
-A small storefront prototype for listing products and collecting preorder requests. It is a dependency-free static website that can be hosted on GitHub Pages.
+A small storefront prototype for listing products and collecting preorder requests. It is a dependency-free static website that can be hosted on Vercel.
 
 ## Try it
 
-1. Open `index.html` from a local web server or deploy the repository with GitHub Pages (HTTPS is needed for account creation).
+1. Deploy this repository to Vercel. No build command is required; the site is served from `index.html`.
 2. Select **Create account**. The first account created in that browser becomes the shop admin.
 3. Open **Dashboard** to add/edit/hide products and review preorder requests.
-4. Sign out and create another account (or use another browser profile) to try the shopper flow. Customers can reserve a quantity and leave their name, email, optional phone number, and a note.
+4. Shoppers can reserve a quantity and leave their name, email, optional phone number, and a note.
 
-The starter catalog is sample data. Listing, account, and preorder data are saved in that browser's `localStorage`; no information is sent to a server. Preorders are requests, not payments or confirmed orders.
+The storefront displays and accepts prices in Ghanaian cedis (GHS). Use the dark/light control in the header to switch themes; your choice is saved in that browser. Listing, account, and preorder data are also saved only in the browser's `localStorage`; no information is sent to a server. Preorders are requests, not payments or confirmed orders.
 
 ## Important before using this for a real shop
 
@@ -17,6 +17,6 @@ This is a UI prototype, **not production authentication or a production preorder
 
 Before launch, connect a backend with server-enforced authentication/authorization and a database; provision the initial admin through a trusted one-time setup; validate stock and requests on the server; and add appropriate privacy, retention, and customer-data protections. Never rely on a role stored in browser state to authorize admin actions.
 
-## Deploy with GitHub Pages
+## Deploy on Vercel
 
-In the repository, open **Settings → Pages**, choose the `main` branch and `/ (root)` as the publishing source, and save. Once published, use the HTTPS URL provided by GitHub Pages.
+Import `klaic999juice/projectme` in Vercel. For a static HTML site, choose the **Other** framework preset, leave the build command empty, and use the repository root as the output directory. Future pushes to the connected GitHub branch trigger deployments automatically. If this repository is not connected to a Vercel project yet, create that connection from the Vercel dashboard.
